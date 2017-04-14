@@ -1,0 +1,38 @@
+1. Princip pojedinaène odgovornosti
+Na dijagramu klasa je zadovoljen ovaj princip, zato što svaka klasa ima dobro odreðen "posao" 
+koji treba da radi, te su one rastereèene od "dodatnog posla" i nemoguæe ih je podijeliti na
+manje dijelove.
+
+2.Otvoreno zatvoren princip
+Ovaj princip je prekršen zato što, ako izuzmemo atribut id iz klase Objava to zahtjeva
+modifikaciju metode obrisiObjavu iz klase RegistrovaniKorisnik, a ista greška se može uoèiti
+ako izuzmemo atribut id iz klase RegistroveniKorisnik èime povlaèimo modifikaciju metode 
+obrisiKorisnika i dodijeliAdministratorskaPrava unutar klase Administrator.
+
+3.Liskov princip zamjene
+U našem dijagramu ovaj princip je zadovoljen zato što pri bilo kojem nasljeðivanju nismo 
+primorani da "na silu" implemetniramo odreðene metode koje nemaju smisla i èija bi implementacija
+ugrozila ispravnost rada drugih dijelova programa.
+
+4. Princip inverzije ovisnosti
+Ovaj princip nije narušen iz razloga što ne postoji ovisnost izmeðu konkretnih klasa.Upravo ovaj
+princip govori da zbog èestih promjena na konkretnim klasama, nije "pametno" imati neke klase 
+koje su izvedene iz tih klasa odnosno koje upravo ovise od tih konkretnih klasa - jer na taj 
+naèin promjene u nekoj konkretnoj klasi dovode do promjena u svim klasama izvedenim iz te 
+konkretne klase (odnosno iz klase koja nije apstraktna). Jedino klasa Administrator naslijeðuje
+klasu RegistrovaniKorisnik, ali kako je u našem primjeru Administrator upravo 
+RegistrovaniKorisnik sa veæim pravima nad sistemom to imamo da je ovaj princip uprkos 
+tome ispunjen.
+
+5. Princip izoliranja interfejsa
+Ovaj princip govori o tome da za konkretnu klasu treba implementirati samo ono što je toj klasi
+doista potrebno. Ovo znaèi da ukoliko imamo neki interfejs sa mnoštvom metoda, ukoliko bi neka 
+klasa naslijedila taj interfejs to bi znaèilo da mora implementirati sve metode tog interfejsa,
+a možda baš toj klasi treba samo par metoda iz tog interfejsa. Da klasa ne bi morala 
+implementirati nepotrebne metode, svaki intefejs bi trebao biti namjenjen iskljuèivo za 
+konkretne akcije koje imaju smisla za taj interfejs - te u tom intefejsu ne treba imati bilo
+kakvu metodu koju klasa, koja naslijeðuje taj intefejs, neæe koristiti. Na ovaj naèin, svaka
+upotreba intefejsa dovodi do toga da æe se vrlo vjerovatno sve metode tog implementiranog 
+interfejsa doista koristiti. U našem primjeru klasnog dijagrama ne postoje suvišne metode koje
+objekti neke klase neæe koristiti, tako da klase koriste sve one metode koje su implementirale
+ili èak naslijedile. Iz svega navedenog imamo da je ovaj princip zadovoljen.
