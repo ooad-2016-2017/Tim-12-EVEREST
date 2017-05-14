@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="Share.Prijava"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Share"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBoxKorisnickoIme" HorizontalAlignment="Center" Width="200" Text="Korisničko ime" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBoxKorisnickiSifra" HorizontalAlignment="Center" Margin="0, 100, 0, 0" Width="200" Text="Šifra" VerticalAlignment="Center"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="213,391,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
