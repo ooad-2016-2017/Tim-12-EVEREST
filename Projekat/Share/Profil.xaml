@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Share.Profil"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Share"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="textBlockImePrezime" HorizontalAlignment="Left" Margin="10,115,0,0" TextWrapping="Wrap" Text="Ime i prezime" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockKorisnickoIme" HorizontalAlignment="Left" Margin="10,140,0,0" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top"/>
+        <Button x:Name="buttonPodijeli" Content="Podijeli" HorizontalAlignment="Left" Margin="148,78,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonSnimiGlas" Content="Snimi glas" HorizontalAlignment="Left" Margin="218,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="115,10,0,0" TextWrapping="Wrap" Text="Pretraga
+                 " VerticalAlignment="Top" Width="165"/>
+        <Button x:Name="buttonOpcije" Content="Opcije" HorizontalAlignment="Left" Margin="285,10,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockKategorije" HorizontalAlignment="Center" Margin="0,160,0,0" TextWrapping="Wrap" Text="Kategorije" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxKategorije" HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top" Width="200"/>
+
+    </Grid>
+</Page>
