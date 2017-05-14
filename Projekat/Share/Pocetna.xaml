@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Share.Pocetna"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Share"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlockKorisnickoIme" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPretraga" HorizontalAlignment="Center" Margin="0,50,0,0" Width="200" Text="Pretraga" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxOpcije" HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top" Width="75" Height="25" ContextCanceled="asd"/>
+        <TextBlock x:Name="textBlockOpcije" HorizontalAlignment="Right" Margin="0,13,80,0" TextWrapping="Wrap" Text="Opcije" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockKategorija" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" Text="Kategorije" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Width="200"/>
+
+    </Grid>
+</Page>

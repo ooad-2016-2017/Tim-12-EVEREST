@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Share.Sadrzaj"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Share"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBoxNaziv" HorizontalAlignment="Center" Margin="0,50,0,0" Width="200" Text="Naziv sadržaja" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxKategorija" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image x:Name="imageSlika" HorizontalAlignment="Center" Height="100" Margin="0,150,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="buttonPronadji" Content="Pronađi" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top"/>
+        <RichEditBox HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="200" Height="200"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="130,505,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="200,505,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
