@@ -92,12 +92,15 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Administrator.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Objava.cs" />
+    <Compile Include="Classes\Osoba.cs" />
     <Compile Include="Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
     </Compile>
@@ -117,12 +120,16 @@
     <Compile Include="RegistrovaniKorisnici.xaml.cs">
       <DependentUpon>RegistrovaniKorisnici.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\RegistrovaniKorisnik.cs" />
     <Compile Include="Sadrzaj.xaml.cs">
       <DependentUpon>Sadrzaj.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Slika.cs" />
     <Compile Include="Statistika.xaml.cs">
       <DependentUpon>Statistika.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Video.cs" />
+    <Compile Include="Classes\Zvuk.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
