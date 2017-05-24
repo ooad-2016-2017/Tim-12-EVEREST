@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Share
 {
-    class Slika
+    public class Slika : Objava
     {
+        public string Url { get; set; }
+
+        public Slika(int id, string naziv, string tip, int korisnikId, int brojSvidjanja, 
+            DateTime datumVrijeme, string url) : base(id, naziv, tip, korisnikId,  brojSvidjanja,
+                datumVrijeme)
+        {
+            Url = url;
+        }
     }
 }

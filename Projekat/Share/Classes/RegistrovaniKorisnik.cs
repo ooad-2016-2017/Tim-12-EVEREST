@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace Share
 {
-    public class RegistrovaniKorisnik
+    public class RegistrovaniKorisnik : Osoba
     {
         private int id;
         private string username;
         private string password;
         private string email;
         public string Image { get; set; }
+
+        public RegistrovaniKorisnik(string ime, string prezime, int id, string username,
+            string password, string email, string image) : base(ime, prezime)
+        {
+            Id = id;
+            Username = username;
+            Password = password;
+            Email = email;
+            Image = image;
+        }
 
         public int Id
         {

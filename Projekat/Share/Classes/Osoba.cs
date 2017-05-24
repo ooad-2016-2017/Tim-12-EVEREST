@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Share
 {
-    public class Osoba
+    public abstract class Osoba
     {
         public string Ime { get; set; }
         public string Prezime { get; set; }
+
+        public Osoba(string ime, string prezime)
+        {
+            Ime = ime;
+            Prezime = prezime;
+        }
     }
 }

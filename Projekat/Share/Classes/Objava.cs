@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Share
 {
-    class Objava
+    public abstract class Objava
     {
         private int id;
         public string Naziv { get; set; }
@@ -16,6 +16,16 @@ namespace Share
         public int BrojSvidjanja { get; set; }
         // Predstavlja datum i vrijeme kada je objava kreirana
         private DateTime datumVrijeme; 
+
+        public Objava(int id, string naziv, string tip, int korisnikId, int brojSvidjanja, DateTime datumVrijeme)
+        {
+            Id = id;
+            Naziv = naziv;
+            Tip = tip;
+            KorisnikId = korisnikId;
+            BrojSvidjanja = brojSvidjanja;
+            DatumVrijeme = datumVrijeme;
+        }
 
         public int Id
         {

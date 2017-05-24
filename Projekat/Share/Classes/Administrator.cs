@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Share
 {
-    class Administrator
+    public class Administrator : RegistrovaniKorisnik
     {
+        public Administrator(string ime, string prezime, int id, string username,
+            string password, string email, string image) : base(ime, prezime, id, username, 
+                password, email, image)
+        {
+
+        }
     }
 }
