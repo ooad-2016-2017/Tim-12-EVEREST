@@ -8,12 +8,220 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlockKorisnickoIme" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxPretraga" HorizontalAlignment="Center" Margin="0,50,0,0" Width="200" Text="Pretraga" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBoxOpcije" HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-        <TextBlock x:Name="textBlockOpcije" HorizontalAlignment="Right" Margin="0,13,80,0" TextWrapping="Wrap" Text="Opcije" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlockKategorija" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" Text="Kategorije" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Width="200"/>
 
+        <Button x:Name="buttonRegistracija" Content="Registracija" HorizontalAlignment="Right" Background="White" Margin="0,20,80,0" VerticalAlignment="Top" Height="30" Width="70" FontSize="10"/>
+        <Button x:Name="buttonPrijava" Content="Prijava" Background="White"  HorizontalAlignment="Right" Margin="0,20,10,0" VerticalAlignment="Top" Height="30" Width="70" FontSize="10"/>
+        <AppBarSeparator x:Name="Separator" HorizontalAlignment="Right" Height="40" Width="40" Margin="0,15,60,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonPretraga" FontFamily="Segoe MDL2 Assets" Content="&#xE094;" HorizontalAlignment="Left" Margin="160,20,0,0" VerticalAlignment="Top" Height="32" Width="40" Background="{x:Null}" BorderBrush="#FFAAA3A3"/>
+        <TextBox x:Name="textBoxPretraga" PlaceholderText="Pretraži..." HorizontalAlignment="Left" Margin="10,20,0,0"  VerticalAlignment="Top" Height="30" Width="150" BorderBrush="#FFAAA3A3"/>
+        <Pivot x:Name="Kategorije" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" Width="340" Height="530" Background="White" Foreground="Black">
+            <PivotItem x:Name="Slike" Header="Slike" HorizontalAlignment="Center" VerticalAlignment="Center" Height="480" Width="340" Margin="0,0,0,0">
+                <GridView>
+
+                </GridView>
+            </PivotItem>
+            <PivotItem x:Name="Video" Header="Video" HorizontalAlignment="Center" VerticalAlignment="Center" Height="480" Width="340" Margin="0,0,0,0">
+                <GridView>
+
+                </GridView>
+            </PivotItem>
+            <PivotItem x:Name="Zvuk" Header="Zvuk" HorizontalAlignment="Center" VerticalAlignment="Center" Height="480" Width="340" Margin="0,0,0,0">
+                <GridView>
+
+                </GridView>
+            </PivotItem>
+        </Pivot>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="PhoneM">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="400"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="buttonRegistracija.Width" Value="70"/>
+                        <Setter Target="buttonPrijava.Width" Value="70"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,85,0"/>
+                        <Setter Target="Separator.Margin" Value="0,15,65,0"/>
+                        <Setter Target="buttonRegistracija.Height" Value="30"/>
+                        <Setter Target="buttonPrijava.Height" Value="30"/>
+                        <Setter Target="Separator.Height" Value="40"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="10"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="10"/>
+                        <Setter Target="buttonPretraga.Height" Value="32"/>
+                        <Setter Target="textBoxPretraga.Height" Value="30"/>
+                        <Setter Target="buttonPretraga.Width" Value="40"/>
+                        <Setter Target="buttonPretraga.Margin" Value="230,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="220"/>
+                        <Setter Target="Kategorije.Width" Value="410"/>
+                        <Setter Target="Slike.Width" Value="410"/>
+                        <Setter Target="Video.Width" Value="410"/>
+                        <Setter Target="Zvuk.Width" Value="410"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="PhoneH">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="500"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="buttonRegistracija.Width" Value="70"/>
+                        <Setter Target="buttonPrijava.Width" Value="70"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,85,0"/>
+                        <Setter Target="Separator.Margin" Value="0,15,65,0"/>
+                        <Setter Target="buttonRegistracija.Height" Value="30"/>
+                        <Setter Target="buttonPrijava.Height" Value="30"/>
+                        <Setter Target="Separator.Height" Value="40"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="10"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="10"/>
+                        <Setter Target="buttonPretraga.Height" Value="32"/>
+                        <Setter Target="textBoxPretraga.Height" Value="30"/>
+                        <Setter Target="buttonPretraga.Width" Value="40"/>
+                        <Setter Target="buttonPretraga.Margin" Value="440,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="430"/>
+                        <Setter Target="Kategorije.Width" Value="620"/>
+                        <Setter Target="Slike.Width" Value="620"/>
+                        <Setter Target="Video.Width" Value="620"/>
+                        <Setter Target="Zvuk.Width" Value="620"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="900"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="buttonRegistracija.Width" Value="150"/>
+                        <Setter Target="buttonPrijava.Width" Value="150"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,165,0"/>
+                        <Setter Target="Separator.Margin" Value="0,20,145,0"/>
+                        <Setter Target="buttonRegistracija.Height" Value="40"/>
+                        <Setter Target="buttonPrijava.Height" Value="40"/>
+                        <Setter Target="Separator.Height" Value="60"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="15"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="15"/>
+                        <Setter Target="buttonPretraga.Height" Value="40"/>
+                        <Setter Target="textBoxPretraga.Height" Value="40"/>
+                        <Setter Target="buttonPretraga.Width" Value="50"/>
+                        <Setter Target="buttonPretraga.Margin" Value="590,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="580"/>
+                        <Setter Target="Kategorije.Width" Value="940"/>
+                        <Setter Target="Slike.Width" Value="940"/>
+                        <Setter Target="Video.Width" Value="940"/>
+                        <Setter Target="Zvuk.Width" Value="940"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1400"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="buttonRegistracija.Width" Value="200"/>
+                        <Setter Target="buttonPrijava.Width" Value="200"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,230,0"/>
+                        <Setter Target="Separator.Margin" Value="0,20,200,0"/>
+                        <Setter Target="buttonRegistracija.Height" Value="50"/>
+                        <Setter Target="buttonPrijava.Height" Value="50"/>
+                        <Setter Target="Separator.Height" Value="70"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="20"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="20"/>
+                        <Setter Target="buttonPretraga.Height" Value="50"/>
+                        <Setter Target="textBoxPretraga.Height" Value="50"/>
+                        <Setter Target="buttonPretraga.Width" Value="60"/>
+                        <Setter Target="buttonPretraga.Margin" Value="940,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="930"/>
+                        <Setter Target="Kategorije.Margin" Value="0,90,0,0"/>
+                        <Setter Target="Kategorije.Width" Value="1380"/>
+                        <Setter Target="Slike.Width" Value="1380"/>
+                        <Setter Target="Video.Width" Value="1380"/>
+                        <Setter Target="Zvuk.Width" Value="1380"/>
+                        <Setter Target="Kategorije.Height" Value="850"/>
+                        <Setter Target="Slike.Height" Value="800"/>
+                        <Setter Target="Video.Height" Value="800"/>
+                        <Setter Target="Zvuk.Height" Value="800"/>
+                        <Setter Target="textBoxPretraga.FontSize" Value="25"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="L">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1900"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                       <Setter Target="buttonRegistracija.Width" Value="250"/>
+                        <Setter Target="buttonPrijava.Width" Value="250"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,280,0"/>
+                        <Setter Target="Separator.Margin" Value="0,20,250,0"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="25"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="25"/>
+                        <Setter Target="buttonPretraga.Width" Value="70"/>
+                        <Setter Target="buttonPretraga.Margin" Value="1310,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="1300"/>
+                        <Setter Target="Kategorije.Margin" Value="0,100,0,0"/>
+                        <Setter Target="Kategorije.Width" Value="1880"/>
+                        <Setter Target="Slike.Width" Value="1880"/>
+                        <Setter Target="Video.Width" Value="1880"/>
+                        <Setter Target="Zvuk.Width" Value="1880"/>
+                        <Setter Target="textBoxPretraga.FontSize" Value="30"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Xl">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="2500"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="buttonRegistracija.Width" Value="300"/>
+                        <Setter Target="buttonPrijava.Width" Value="300"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,350,0"/>
+                        <Setter Target="Separator.Margin" Value="0,20,310,0"/>
+                        <Setter Target="buttonRegistracija.Height" Value="70"/>
+                        <Setter Target="buttonPrijava.Height" Value="70"/>
+                        <Setter Target="Separator.Height" Value="90"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="30"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="30"/>
+                        <Setter Target="buttonPretraga.Height" Value="70"/>
+                        <Setter Target="textBoxPretraga.Height" Value="70"/>
+                        <Setter Target="buttonPretraga.Width" Value="80"/>
+                        <Setter Target="buttonPretraga.Margin" Value="1810,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="1800"/>
+                        <Setter Target="Kategorije.Margin" Value="0,100,0,0"/>
+                        <Setter Target="Kategorije.Width" Value="2480"/>
+                        <Setter Target="Slike.Width" Value="2480"/>
+                        <Setter Target="Video.Width" Value="2480"/>
+                        <Setter Target="Zvuk.Width" Value="2480"/>
+                        <Setter Target="textBoxPretraga.FontSize" Value="35"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="PhoneHe">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="400"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="buttonRegistracija.Width" Value="70"/>
+                        <Setter Target="buttonPrijava.Width" Value="70"/>
+                        <Setter Target="buttonRegistracija.Margin" Value="0,20,85,0"/>
+                        <Setter Target="Separator.Margin" Value="0,15,65,0"/>
+                        <Setter Target="buttonRegistracija.Height" Value="30"/>
+                        <Setter Target="buttonPrijava.Height" Value="30"/>
+                        <Setter Target="Separator.Height" Value="40"/>
+                        <Setter Target="buttonRegistracija.FontSize" Value="10"/>
+                        <Setter Target="buttonPrijava.FontSize" Value="10"/>
+                        <Setter Target="buttonPretraga.Height" Value="32"/>
+                        <Setter Target="textBoxPretraga.Height" Value="30"/>
+                        <Setter Target="buttonPretraga.Width" Value="40"/>
+                        <Setter Target="buttonPretraga.Margin" Value="440,20,0,0"/>
+                        <Setter Target="textBoxPretraga.Width" Value="430"/>
+                        <Setter Target="Kategorije.Height" Value="300"/>
+                        <Setter Target="Slike.Height" Value="270"/>
+                        <Setter Target="Video.Height" Value="270"/>
+                        <Setter Target="Zvuk.Height" Value="270"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>

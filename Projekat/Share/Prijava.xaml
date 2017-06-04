@@ -8,9 +8,80 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="textBoxKorisnickoIme" HorizontalAlignment="Center" Width="200" Text="Korisničko ime" VerticalAlignment="Center"/>
-        <TextBox x:Name="textBoxKorisnickiSifra" HorizontalAlignment="Center" Margin="0, 100, 0, 0" Width="200" Text="Šifra" VerticalAlignment="Center"/>
-        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="213,391,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxKorisnickoIme" Height="20"  Width="200" Text="Korisničko ime" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBoxKorisnickiSifra" Height="20"  Width="200" Text="Šifra" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,0,0"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,160,0,0"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBoxKorisnickoIme.Width"  Value="200"/>
+                        <Setter Target="textBoxKorisnickiSifra.Width" Value="200"/>
+                        <Setter Target="buttonPotvrdi.Width" Value="100"/>
+                        <Setter Target="textBoxKorisnickoIme.Height" Value="20"/>
+                        <Setter Target="textBoxKorisnickiSifra.Height" Value="20"/>
+                        <Setter Target="buttonPotvrdi.Height" Value="20"/>
+                        <Setter Target="buttonPotvrdi.FontSize" Value="7"/>
+                        <Setter Target="textBoxKorisnickoIme.FontSize" Value="10"/>
+                        <Setter Target="textBoxKorisnickiSifra.FontSize" Value="10"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="900"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBoxKorisnickoIme.Width" Value="300"/>
+                        <Setter Target="textBoxKorisnickiSifra.Width" Value="300"/>
+                        <Setter Target="buttonPotvrdi.Width" Value="100"/>
+                        <Setter Target="textBoxKorisnickoIme.Height" Value="30"/>
+                        <Setter Target="textBoxKorisnickiSifra.Height" Value="30"/>
+                        <Setter Target="buttonPotvrdi.Height" Value="30"/>
+                        <Setter Target="textBoxKorisnickoIme.Margin" Value="0,0,0,0"/>
+                        <Setter Target="textBoxKorisnickiSifra.Margin" Value="0,100,0,0" />
+                        <Setter Target="buttonPotvrdi.Margin" Value="200,190,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1200"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBoxKorisnickoIme.Width" Value="500"/>
+                        <Setter Target="textBoxKorisnickiSifra.Width" Value="500"/>
+                        <Setter Target="buttonPotvrdi.Width" Value="200"/>
+                        <Setter Target="textBoxKorisnickoIme.Height" Value="40"/>
+                        <Setter Target="textBoxKorisnickiSifra.Height" Value="40"/>
+                        <Setter Target="buttonPotvrdi.Height" Value="40"/>
+                        <Setter Target="textBoxKorisnickoIme.Margin" Value="0,0,0,0"/>
+                        <Setter Target="textBoxKorisnickiSifra.Margin" Value="0,120,0,0"/>
+                        <Setter Target="buttonPotvrdi.Margin" Value="300,240,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Xl">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="2500"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="textBoxKorisnickoIme.Width" Value="700"/>
+                        <Setter Target="textBoxKorisnickiSifra.Width" Value="700"/>
+                        <Setter Target="buttonPotvrdi.Width" Value="300"/>
+                        <Setter Target="textBoxKorisnickoIme.Height" Value="60"/>
+                        <Setter Target="textBoxKorisnickiSifra.Height" Value="60"/>
+                        <Setter Target="buttonPotvrdi.Height" Value="60"/>
+                        <Setter Target="textBoxKorisnickoIme.Margin" Value="0,0,0,0"/>
+                        <Setter Target="textBoxKorisnickiSifra.Margin" Value="0,180,0,0"/>
+                        <Setter Target="buttonPotvrdi.Margin" Value="400,350,0,0"/>
+                        <Setter Target="textBoxKorisnickoIme.FontSize" Value="30"/>
+                        <Setter Target="textBoxKorisnickiSifra.FontSize" Value="30"/>
+                        <Setter Target="buttonPotvrdi.FontSize" Value="30"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
 
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>

@@ -26,5 +26,10 @@ namespace Share
         {
             this.InitializeComponent();
         }
+
+        private void textBoxKorisnickoIme_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
