@@ -10,7 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBox x:Name="textBoxKorisnickoIme" Height="20"  Width="200" Text="Korisničko ime" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBox x:Name="textBoxKorisnickiSifra" Height="20"  Width="200" Text="Šifra" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,0,0"/>
-        <Button x:Name="buttonPotvrdi" Content="Potvrdi" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,160,0,0"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" Height="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="180,381,80,229"/>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="Phone">
@@ -23,7 +23,7 @@
                         <Setter Target="buttonPotvrdi.Width" Value="100"/>
                         <Setter Target="textBoxKorisnickoIme.Height" Value="20"/>
                         <Setter Target="textBoxKorisnickiSifra.Height" Value="20"/>
-                        <Setter Target="buttonPotvrdi.Height" Value="20"/>
+                        <Setter Target="buttonPotvrdi.Height" Value="30"/>
                         <Setter Target="buttonPotvrdi.FontSize" Value="7"/>
                         <Setter Target="textBoxKorisnickoIme.FontSize" Value="10"/>
                         <Setter Target="textBoxKorisnickiSifra.FontSize" Value="10"/>

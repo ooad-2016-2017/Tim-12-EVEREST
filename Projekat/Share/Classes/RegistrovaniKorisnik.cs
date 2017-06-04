@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Share
 {
     public class RegistrovaniKorisnik : Osoba
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private int id;
         private string username;
         private string password;
@@ -32,11 +34,6 @@ namespace Share
             }
             set
             {
-                /** 
-                 * @field-id se postavlja na vrijednost za 1 veću od vrijednosti posljednjeg 
-                 * registrovanog korisnika.
-                 * Vrijednost @field-id će se automatski dodijeliti korisniku pri registraciji.
-                 */
                 id = value;
             }
         }
